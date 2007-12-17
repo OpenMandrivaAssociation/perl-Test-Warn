@@ -19,7 +19,6 @@ BuildRequires:  perl(Test::Exception)
 BuildRequires:  perl(Array::Compare)
 BuildRequires:  perl(Tree::DAG_Node)
 BuildRequires:  perl(Test::Builder::Tester)
-BuildRoot:      %{_tmppath}/%{name}-%{version}
 
 %description 
 This module provides a few convenience methods for testing warning based code.
