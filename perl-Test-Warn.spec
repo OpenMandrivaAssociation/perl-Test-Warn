@@ -1,5 +1,5 @@
 %define upstream_name    Test-Warn
-%define upstream_version 0.21
+%define upstream_version 0.22
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
@@ -9,7 +9,7 @@ Summary:    Perl extension to test methods for warnings
 License:    GPL+ or Artistic
 Group:      Development/Perl
 URL:        http://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.zip
+Source0:    http://www.cpan.org/modules/by-module/Test/%{upstream_name}-%{upstream_version}.tar.gz
 
 %if %{mdkversion} < 1010
 BuildRequires:  perl-devel
@@ -18,7 +18,9 @@ BuildRequires:  perl(Array::Compare)
 BuildRequires:  perl(Test::Builder::Tester)
 BuildRequires:  perl(Tree::DAG_Node)
 BuildRequires:  perl(Test::Exception)
+
 BuildRoot:      %{_tmppath}/%{name}-%{version}-%{release}
+
 Requires:       perl(Tree::DAG_Node)
 
 %description 
