@@ -1,9 +1,9 @@
 %define upstream_name    Test-Warn
-%define upstream_version 0.22
+%define upstream_version 0.23
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:    %mkrel 1
 
 Summary:    Perl extension to test methods for warnings
 License:    GPL+ or Artistic
