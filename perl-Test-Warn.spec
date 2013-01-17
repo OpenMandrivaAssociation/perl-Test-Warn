@@ -1,9 +1,9 @@
 %define upstream_name    Test-Warn
-%define upstream_version 0.23
+%define upstream_version 0.24
 
 Name:		perl-%{upstream_name}
 Version:	%perl_convert_version %{upstream_version}
-Release:	5
+Release:	1
 
 Summary:	Perl extension to test methods for warnings
 License:	GPL+ or Artistic
@@ -17,7 +17,7 @@ BuildRequires:	perl(Test::Builder::Tester)
 BuildRequires:	perl(Tree::DAG_Node)
 BuildRequires:	perl(Test::Exception)
 
-Requires:		perl(Tree::DAG_Node)
+Requires:	perl(Tree::DAG_Node)
 
 BuildArch:	noarch
 
