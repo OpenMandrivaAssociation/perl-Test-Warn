@@ -1,10 +1,10 @@
 %define modname	Test-Warn
-%define modver	0.24
+%define modver 0.30
 
 Summary:	Perl extension to test methods for warnings
 Name:		perl-%{modname}
 Version:	%perl_convert_version %{modver}
-Release:	6
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:	http://search.cpan.org/dist/%{modname}
@@ -40,4 +40,5 @@ time to go take a look.
 %doc Changes README
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
+
 
