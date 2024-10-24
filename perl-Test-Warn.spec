@@ -1,14 +1,13 @@
 %define modname	Test-Warn
-%define modver 0.36
 
 Summary:	Perl extension to test methods for warnings
 Name:		perl-%{modname}
-Version:	%perl_convert_version %{modver}
-Release:	4
+Version:	0.37
+Release:	1
 License:	GPLv2+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/pod/Test::Warn
-Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{modver}.tar.gz
+Source0:	http://www.cpan.org/modules/by-module/Test/%{modname}-%{version}.tar.gz
 BuildArch:	noarch
 BuildRequires:	perl(Test)
 BuildRequires:	perl-devel
@@ -25,14 +24,14 @@ If you are not already familiar with the Test::More manpage now would be the
 time to go take a look.
 
 %prep
-%setup -qn %{modname}-%{modver}
+%autosetup -p1 -n %{modname}-%{version}
 
 %build
-%__perl Makefile.PL INSTALLDIRS=vendor
-%make
+perl Makefile.PL INSTALLDIRS=vendor
+%make_build
 
 %install
-%makeinstall_std
+%make_install
 
 %check
 %make test
@@ -41,5 +40,3 @@ time to go take a look.
 %doc Changes README
 %{perl_vendorlib}/Test
 %{_mandir}/man3/*
-
-
